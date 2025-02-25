@@ -16,7 +16,7 @@ scrape_configs:
     scrape_interval: 15s
 
     static_configs:
-      - targets: ['core-api-staging-f4aa.up.railway.app']
+      - targets: ['https://core-api-staging-f4aa.up.railway.app/actuator/prometheus']
 
   # - job_name: 'postgres'
   #   scrape_interval: 5s

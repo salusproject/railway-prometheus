@@ -8,9 +8,9 @@ scrape_configs:
     scrape_interval: 15s
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['core-api.railway.internal:80']
+      - targets: ['core-api.railway.internal']
 
   - job_name: 'postgres'
     scrape_interval: 5s
     static_configs:
-      - targets: ['postgres.railway.internal:5432']
+      - targets: ['postgres.railway.internal']

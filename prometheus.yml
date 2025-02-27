@@ -1,15 +1,15 @@
 global:
   scrape_interval: 15s
   external_labels:
-    monitor: railway-prom
+    monitor: 'railway-prom'
+
 scrape_configs:
-  - job_name: core-api
+  - job_name: 'core-api'
     scrape_interval: 15s
     static_configs:
-      - targets:
-          - 'core-api.railway.internal/actuator/prometheus/'
-  - job_name: postgres
+      - targets: ['core-api.railway.internal/actuator/prometheus']
+
+  - job_name: 'postgres'
     scrape_interval: 5s
     static_configs:
-      - targets:
-          - 'postgres.railway.internal:5432'
+      - targets: ['postgres.railway.internal:5432']
